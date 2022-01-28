@@ -1,0 +1,12 @@
+.btn-add-wala{
+    float: right;
+}
+.select-class{
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background: white;
+}
+.select-class:focus{
+ border:1px solid  gray;
+}

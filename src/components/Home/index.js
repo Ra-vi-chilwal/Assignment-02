@@ -1,15 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
+import "./Home.css"
 const Home = ({ contacts, deleteContact }) => {
   return (
     <div className="container">
-      <div className="row d-flex flex-column">
-        <Link to="/add" className="btn btn-outline-dark my-5 ml-auto ">
-          Add Contact
-        </Link>
+      <div className="row d-flex flex-column  pt-5">
+      
+        <div className="card">
         <div className="col-md-10 mx-auto my-4">
+        <Link to="/add" className="btn btn-outline-dark my-5 btn-add-wala">
+         New Student
+        </Link>
           <table className="table table-hover">
             <thead className="table-header bg-dark text-white">
               <tr>
@@ -17,7 +19,9 @@ const Home = ({ contacts, deleteContact }) => {
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
-                <th scope="col"></th>
+                <th scope="col">Class</th>
+                <th scope="col">Marks %</th>
+                <th scope="col">Edit</th>
               </tr>
             </thead>
             <tbody>
@@ -28,6 +32,8 @@ const Home = ({ contacts, deleteContact }) => {
                     <td>{contact.name}</td>
                     <td>{contact.email}</td>
                     <td>{contact.phone}</td>
+                    <td>{contact.StudentClass}</td>
+                    <td>{contact.marks}%</td>
                     <td>
                       <Link
                         to={`/edit/${contact.id}`}
@@ -47,11 +53,12 @@ const Home = ({ contacts, deleteContact }) => {
                 ))
               ) : (
                 <tr>
-                  <th>No contacts found</th>
+                  <th>No Studetnt found</th>
                 </tr>
               )}
             </tbody>
           </table>
+        </div>
         </div>
       </div>
     </div>

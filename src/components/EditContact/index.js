@@ -14,11 +14,16 @@ const EditContact = ({ contacts, updateContact }) => {
     setName(currentContact.name);
     setEmail(currentContact.email);
     setPhone(currentContact.phone);
+    setMarks(currentContact.marks);
+    setStudentClass(currentContact.StudentClass);
+
   }, [currentContact]);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [marks, setMarks] = useState("");
+  const [StudentClass, setStudentClass] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,6 +53,8 @@ const EditContact = ({ contacts, updateContact }) => {
       email,
       name,
       phone,
+      marks,
+      StudentClass,
     };
 
     updateContact(data);
@@ -90,6 +97,16 @@ const EditContact = ({ contacts, updateContact }) => {
                   placeholder={"Phone"}
                   onChange={(e) => setPhone(e.target.value)}
                 />
+              </div>
+              <div className="form-group">
+              <input
+                className="form-control"
+                type="number"
+                placeholder="Marks"
+                value={marks}
+                onChange={(e) => setMarks(e.target.value)}
+              />
+              
               </div>
               <div className="form-group d-flex align-items-center justify-content-between my-2">
                 <button type="submit" className="btn btn-primary">
