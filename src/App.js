@@ -1,21 +1,34 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import AddPost from "./components/AddContact";
-import EditContact from "./components/EditContact";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+import Profile from "./components/Profile"
 import "./styles.css";
 
-const App = () => {
+
+
+export default function App() {
+ 
+
   return (
     <div className="App">
-      <ToastContainer />
-      <Navbar />
-      <Route exact path="/" component={() => <Home />} />
-      <Route exact path="/add" component={() => <AddPost />} />
-      <Route exact path="/edit/:id" component={() => <EditContact />} />
+    <div className=" p-5">
+    <div className="row">
+      <div className="col-xl-4 col-md-12 p-2">
+      <Profile />
+      </div>
+  
+      <div className="col-xl-4 col-md-12 p-2">
+      <Profile />
+      </div>
+   
+      <div className="col-xl-4 col-md-12 p-2">
+      <Profile />
+      </div>
+    </div>
+    </div>
+   
+    
+
+    
     </div>
   );
 };
-export default App;
+

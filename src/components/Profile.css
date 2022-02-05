@@ -1,0 +1,32 @@
+.head-date{
+    font-weight: 600;
+    color: rgb(38, 52, 129);
+}
+.location{
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    
+}
+.track{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    padding: 50px;
+    margin-left: 60px;
+    
+}
+img{
+    border-radius: 15px 15px 0px 0px;
+    
+}
+.card{
+    border-radius: 15px !important;
+}
+.price{
+    margin-top: -27px;
+    font-weight: 700;
+    color: rgb(220, 217, 223);
+    padding-left: 20px;
+   
+}
